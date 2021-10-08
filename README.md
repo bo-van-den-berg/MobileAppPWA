@@ -1,2 +1,0 @@
-# MobileAppPWA
-progressive web app
