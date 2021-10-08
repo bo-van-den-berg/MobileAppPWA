@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bo-van-den-berg/MobileAppPWA/issues"
   },
-  "homepage": "https://github.com/bo-van-den-berg/MobileAppPWA#readme"
+  "homepage": "https://github.com/bo-van-den-berg/MobileAppPWA#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
