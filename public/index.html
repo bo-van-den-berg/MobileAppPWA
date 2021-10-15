@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+    <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
@@ -10,6 +11,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(() => console.log("Service Worker Registered"))
+                .catch(e => console.log(e));
+        }
+    </script>
 </head>
 <body>
     <ons-page>
@@ -19,19 +28,19 @@
             onchange="ons.notification.alert('Searched for: ' + this.value)"
           ></ons-search-input>
 
-          <ons-button onclick="ons.notification.alert('bak')">Click me</ons-button>
+          <ons-button onclick="ons.notification.alert('Baklava')">Bak</ons-button>
         </p>
-      </ons-page>
 
-      <ons-popover direction="up" id="popover">
-        <div style="padding: 10px; text-align: center;">
-          <p>
-            This is a popover
-          </p>
-          <p>
-            <ons-button onclick="hidePopover()">Close</ons-button>
-          </p>
-        </div>
-      </ons-popover>
+        <ons-toolbar>
+            <div class="center"></div>
+            <div class="right">
+              <ons-toolbar-button>
+                <ons-icon icon="ion-ios-menu, material:md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+          </ons-toolbar>
+    </ons-page>
+
+      <script src="script.js"></script>
 </body>
 </html>
