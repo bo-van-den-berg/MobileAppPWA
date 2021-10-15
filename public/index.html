@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,5 +14,14 @@
 <body>
     <div style = "color: aqua;" class="player">hallo
     </div>
+
+    <ons-page>
+        <p style="text-align: center; margin-top: 10px;">
+          <ons-search-input
+            placeholder="Search"
+            onchange="ons.notification.alert('Searched for: ' + this.value)"
+          ></ons-search-input>
+        </p>
+      </ons-page>
 </body>
 </html>
