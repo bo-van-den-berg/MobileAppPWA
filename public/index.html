@@ -19,16 +19,19 @@
             onchange="ons.notification.alert('Searched for: ' + this.value)"
           ></ons-search-input>
 
-          <ons-button>
-            <ons-icon icon="md-face"></ons-icon>
-            barrel
-          </ons-button>
-    
-          <ons-button>
-            <ons-icon icon="md-face"></ons-icon>
-            click me
-          </ons-button>
+          <ons-button onclick="ons.notification.alert('bak')">Click me</ons-button>
         </p>
       </ons-page>
+
+      <ons-popover direction="up" id="popover">
+        <div style="padding: 10px; text-align: center;">
+          <p>
+            This is a popover
+          </p>
+          <p>
+            <ons-button onclick="hidePopover()">Close</ons-button>
+          </p>
+        </div>
+      </ons-popover>
 </body>
 </html>
