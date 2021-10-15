@@ -12,7 +12,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div style = "color: rgb(143, 9, 170);" class="player">hallo
-    </div>
+    <ons-page>
+        <p style="text-align: center; margin-top: 10px;">
+          <ons-search-input
+            placeholder="Search"
+            onchange="ons.notification.alert('Searched for: ' + this.value)"
+          ></ons-search-input>
+        </p>
+      </ons-page>
 </body>
 </html>
